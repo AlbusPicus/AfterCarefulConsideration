@@ -8,9 +8,12 @@ java {
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 
+apply from: '../common_dependencies.gradle'
+
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     implementation project(':repository')
-    implementation 'org.kodein.di:kodein-di:7.1.0'
+    implementation project(':repository:stub')
+    api project(':data')
 }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="company_aspect_ratio_landscape">4:3</string>
+    <string name="company_aspect_ratio_portrait">3:4</string>
+
+</resources>

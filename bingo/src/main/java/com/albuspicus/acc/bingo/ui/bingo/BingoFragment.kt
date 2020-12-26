@@ -13,22 +13,24 @@ import com.albuspicus.acc.bingo.ui.bingo.delegates.BingoDelegate
 import com.albuspicus.acc.bingo.ui.bingo.delegates.BingoFreeCellDelegate
 import com.albuspicus.recycler_delegates.DefaultDelegatesManager
 import com.albuspicus.recycler_delegates.ListDelegatesAdapter
+import com.albuspicus.ui.BindingFragment
+import org.kodein.di.DI
+import org.kodein.di.DIAware
+import org.kodein.di.android.subDI
+import org.kodein.di.instance
 
 private const val BINGO_SPAN_COUNT = 5
 
-class BingoFragment : Fragment() {
+class BingoFragment : BindingFragment<FragmentBingoBinding>(), DIAware {
 
-    private lateinit var viewModel: com.albuspicus.acc.bingo.ui.bingo.BingoViewModel
+    override val di: DI = subDI({ (activity as DIAware).di }) {
+        import(module())
+    }
 
-    private var _binding: FragmentBingoBinding? = null
-    private val binding get() = _binding!!
+    private val viewModel: BingoViewModel by di.instance()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentBingoBinding.inflate(inflater, container, false)
-        return binding.root
+    override fun inflateBinding(inflater: LayoutInflater, container: ViewGroup?): FragmentBingoBinding {
+        return FragmentBingoBinding.inflate(inflater, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -46,15 +48,9 @@ class BingoFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(BingoViewModel::class.java)
         viewModel.bingoCards.observe(viewLifecycleOwner) { cards ->
             (binding.bingoRecycler.adapter as? ListDelegatesAdapter<BingoCard>)?.updateItems(cards)
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 
     companion object {

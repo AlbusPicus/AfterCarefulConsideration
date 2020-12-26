@@ -16,7 +16,8 @@
             <option value="$PROJECT_DIR$/data" />
             <option value="$PROJECT_DIR$/recycler_delegates" />
             <option value="$PROJECT_DIR$/repository" />
-            <option value="$PROJECT_DIR$/stub_repository" />
+            <option value="$PROJECT_DIR$/repository/stub" />
+            <option value="$PROJECT_DIR$/ui" />
             <option value="$PROJECT_DIR$/usecases" />
           </set>
         </option>

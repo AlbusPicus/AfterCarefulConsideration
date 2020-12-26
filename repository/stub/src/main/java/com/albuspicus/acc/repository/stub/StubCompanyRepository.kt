@@ -1,4 +1,4 @@
-package com.albuspicus.acc.stub_repository
+package com.albuspicus.acc.repository.stub
 
 import com.albuspicus.acc.data.Company
 import com.albuspicus.acc.repository.CompanyRepository

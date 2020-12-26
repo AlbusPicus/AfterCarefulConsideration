@@ -1,8 +1,9 @@
+include ':repository:stub'
+include ':ui'
 include ':recycler_delegates'
 include ':bingo'
 include ':usecases'
 include ':data'
 include ':repository'
-include ':stub_repository'
 include ':app'
-rootProject.name = "After Careful Consideration Bingo"
+rootProject.name = "After Careful Consideration"

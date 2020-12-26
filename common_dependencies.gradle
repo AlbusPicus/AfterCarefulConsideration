@@ -1,0 +1,5 @@
+project.ext.kodeinVersion = '7.1.0'
+
+dependencies {
+    api "org.kodein.di:kodein-di:$project.ext.kodeinVersion"
+}
