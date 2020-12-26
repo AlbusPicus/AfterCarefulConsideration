@@ -26,14 +26,15 @@ class CompaniesListFragment : BindingFragment<FragmentCompaniesListBinding>(), D
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel.companiesList.observe(viewLifecycleOwner) { companies ->
-            //TODO ensure the number of elements
-            binding.company1.text = companies[0].name
-            binding.company2.text = companies[1].name
-            binding.company3.text = companies[2].name
-            binding.company4.text = companies[3].name
-            binding.company5.text = companies[4].name
-            binding.company6.text = companies[5].name
-            binding.root.transitionToEnd()
+            if (companies.size >= 6) {
+                binding.company1.text = companies[0].name
+                binding.company2.text = companies[1].name
+                binding.company3.text = companies[2].name
+                binding.company4.text = companies[3].name
+                binding.company5.text = companies[4].name
+                binding.company6.text = companies[5].name
+                binding.root.transitionToEnd()
+            }
         }
     }
 
