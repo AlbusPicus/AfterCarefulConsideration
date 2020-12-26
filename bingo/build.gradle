@@ -38,7 +38,7 @@ android {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-    implementation project(':recycler_delegates')
+    implementation project(':ui:recycler')
     implementation project(':usecases')
     api project(':ui')
 

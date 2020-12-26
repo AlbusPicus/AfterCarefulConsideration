@@ -1,6 +1,6 @@
+include ':ui:recycler'
 include ':repository:stub'
 include ':ui'
-include ':recycler_delegates'
 include ':bingo'
 include ':usecases'
 include ':data'

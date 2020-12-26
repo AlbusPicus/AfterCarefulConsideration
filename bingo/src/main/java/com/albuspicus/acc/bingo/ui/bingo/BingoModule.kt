@@ -2,7 +2,7 @@ package com.albuspicus.acc.bingo.ui.bingo
 
 import com.albuspicus.acc.usecase_random_companies.GetRandomCompaniesUseCase
 import com.albuspicus.acc.usecase_random_companies.GetStubRandomCompaniesUseCase
-import com.albuspicus.ui.obtainRegisteredViewModel
+import com.albuspicus.acc.ui.obtainRegisteredViewModel
 import org.kodein.di.DI
 import org.kodein.di.bind
 import org.kodein.di.instance

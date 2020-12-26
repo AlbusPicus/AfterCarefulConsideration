@@ -3,10 +3,9 @@ package com.albuspicus.acc.bingo.ui.companieslist
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.observe
 import com.albuspicus.acc.bingo.databinding.FragmentCompaniesListBinding
-import com.albuspicus.ui.BindingFragment
+import com.albuspicus.acc.ui.BindingFragment
 import org.kodein.di.DI
 import org.kodein.di.DIAware
 import org.kodein.di.android.subDI

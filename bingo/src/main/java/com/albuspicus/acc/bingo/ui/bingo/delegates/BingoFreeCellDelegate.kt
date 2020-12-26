@@ -3,7 +3,7 @@ package com.albuspicus.acc.bingo.ui.bingo.delegates
 import com.albuspicus.acc.bingo.databinding.DelegateBingoFreeCellBinding
 import com.albuspicus.acc.bingo.ui.bingo.BingoCard
 import com.albuspicus.acc.bingo.ui.bingo.BingoOption
-import com.albuspicus.recycler_delegates.SmartDelegate
+import com.albuspicus.acc.ui.recycler.SmartDelegate
 
 class BingoFreeCellDelegate : SmartDelegate<BingoCard, DelegateBingoFreeCellBinding>(bindingCreator = { inflater, parent ->
     DelegateBingoFreeCellBinding.inflate(inflater, parent, false)
