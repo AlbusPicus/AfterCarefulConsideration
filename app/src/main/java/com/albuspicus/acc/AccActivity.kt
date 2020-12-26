@@ -1,7 +1,7 @@
 package com.albuspicus.acc
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.albuspicus.acc.bingo.ui.companieslist.CompaniesListFragment
 import org.kodein.di.DIAware
 import org.kodein.di.DIContext
